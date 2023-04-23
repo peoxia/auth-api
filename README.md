@@ -29,6 +29,7 @@ For extra security passwords are not stored in the database, Google provides exc
 **DELETE /api/v1/users/me** - delete current user's profile
 
 ## Run
+For local testing create a .env file by using the .env.example and insert required credentials, then run the command:
 ```
 make server
 ```
