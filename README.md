@@ -20,7 +20,7 @@ For extra security passwords are not stored in the database, Google provides exc
 <br><br>
 **GET /api/v1/login** - initiates login and redirects to Google
 
-**GET /api/v1/login/callback** - callback endpoint called when user completed log in, created or updates user profile in storage
+**GET /api/v1/login/callback** - callback endpoint called when user completed log in, creates or updates user profile
 <br><br>
 **GET /api/v1/users/me** - profile of a current user
 
