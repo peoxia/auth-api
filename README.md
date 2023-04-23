@@ -3,38 +3,38 @@
     <p>The authentication API allows users to sign in using their Google accounts and generates a JWT for subsequent authentication.</p>
 </div>
 
-# Description
+## Description
 Head to the front page and log in with your Google Account. The login will automatically create a user profile and store it in MongoDB. Use the API to update your profile or to delete it from MongoDB. 
 
 For extra security passwords are not stored in the database, Google provides excellent protection with 2FA options to secure your account.
 
-# Requirements
+## Requirements
 * Go >=1.17
+* MongoDB
 * Google Cloud OAuth 2.0 Client ID
 
-# API
+## API
 **GET /_healthz** - health check
 
 **GET /** - front page
-
+<br><br>
 **GET /api/v1/login** - initiates login and redirects to Google
 
-**GET /api/v1/login/callback** - callback endpoint called when user completed log in and upserts user details
-
+**GET /api/v1/login/callback** - callback endpoint called when user completed log in, created or updates user profile in storage
+<br><br>
 **GET /api/v1/users/me** - profile of a current user
 
 **POST /api/v1/users/me** - update current user's profile
 
 **DELETE /api/v1/users/me** - delete current user's profile
 
-# Run server
+## Run
 ```
 make server
 ```
+The API will be accessible at localhost:8080
 
-# Test
+## Test
 ```
 make test
 ```
-
-The API will be accessible at localhost:8080.
